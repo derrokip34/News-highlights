@@ -1,0 +1,20 @@
+{% macro displayNewsSourcesList(news_source_list) %} 
+{% for source in news_source_list %}
+<div class="col-md-3">
+    <div class = "thumbnail">
+        <div class="row">
+        <div class="caption">
+            <h3 class="panel-heading"> {{source.name}} </h3>
+        </div>
+        <div class="panel-body">
+            <p> 
+                {{ source.description |truncate(120)}}
+                <br>
+                <a class = "btn btn-primary" href="/articles/{{source.id}}">View {{source.name}} Articles</a>
+            </p>            
+        </div>
+    </div>
+    </div>
+</div>
+{% endfor %} 
+{% endmacro %}
