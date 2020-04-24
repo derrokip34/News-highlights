@@ -2,14 +2,15 @@
 {% import 'macros.html' as macro %}
 
 {% block styles %}
-
+{{super ()}}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="{{url_for('static',filename='css/mine.css')}}">
 {% endblock %}
 
 {% block content %}
 <div style="text-align: center;" class="jumbotron">
-    <h1>NEWS HIGHLIGHTS</h1>
+    <h1><i class="fas fa-cloud"></i>NEWS HIGHLIGHTS</h1>
 </div>
 
 <div class="container">
