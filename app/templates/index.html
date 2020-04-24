@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+
+{% block content %}
+<div class="container">
+    <hr>
+    <div class="row">
+        <div class="col-md-12">
+            <h1>GENERAL</h1>
+            <hr>
+        </div>
+        {{ macro.displayNewsSourcesList(general) }}
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h1>HEALTH</h1>
+            <hr>
+        </div>
+        {{ macro.displayNewsSourcesList(health) }}
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h1>SPORTS</h1>
+            <hr>
+        </div>
+        {{ macro.displayNewsSourcesList(sports) }}
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h1>BUSINESS</h1>
+            <hr>
+        </div>
+        {{ macro.displayNewsSourcesList(business) }}
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h1>TECHNOLOGY</h1>
+            <hr>
+        </div>
+        {{ macro.displayNewsSourcesList(technology) }}
+    </div>
+</div>
+{% endblock %}
