@@ -1,43 +1,60 @@
 {% extends 'base.html' %}
 {% import 'macros.html' as macro %}
 
+{% block styles %}
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/mine.css')}}">
+{% endblock %}
+
 {% block content %}
+<div style="text-align: center;" class="jumbotron">
+    <h1>NEWS HIGHLIGHTS</h1>
+</div>
+
 <div class="container">
     <hr>
-    <div class="row">
+    <div class="row source">
         <div class="col-md-12">
-            <h1>GENERAL</h1>
+            <h2>GENERAL</h2>
             <hr>
         </div>
         {{ macro.displayNewsSourcesList(general) }}
     </div>
-    <div class="row">
+    <div class="row source">
         <div class="col-md-12">
-            <h1>HEALTH</h1>
+            <h2>ENTERTAINMENT</h2>
             <hr>
         </div>
-        {{ macro.displayNewsSourcesList(health) }}
+        {{ macro.displayNewsSourcesList(entertainment) }}
     </div>
-    <div class="row">
+    <div class="row source">
         <div class="col-md-12">
-            <h1>SPORTS</h1>
+            <h2>SPORTS</h2>
             <hr>
         </div>
         {{ macro.displayNewsSourcesList(sports) }}
     </div>
-    <div class="row">
+    <div class="row source">
         <div class="col-md-12">
-            <h1>BUSINESS</h1>
+            <h2>BUSINESS</h2>
             <hr>
         </div>
         {{ macro.displayNewsSourcesList(business) }}
     </div>
-    <div class="row">
+    <div class="row source">
         <div class="col-md-12">
-            <h1>TECHNOLOGY</h1>
+            <h2>TECHNOLOGY</h2>
             <hr>
         </div>
         {{ macro.displayNewsSourcesList(technology) }}
+    </div>
+    <div class="row source">
+        <div class="col-md-12">
+            <h2>HEALTH</h2>
+            <hr>
+        </div>
+        {{ macro.displayNewsSourcesList(health) }}
     </div>
 </div>
 {% endblock %}
